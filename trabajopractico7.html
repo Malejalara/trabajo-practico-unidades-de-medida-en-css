@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unidades de medida en css</title>
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            height:100%;
+            background-color: teal;
+    }
+    header{
+            background-color: rgb(174, 238, 247);
+            height: 20vh;
+            text-align: center;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color:teal;
+            margin:20px;
+        }
+        nav{
+            background-color: rgb(174, 238, 247);
+            height: 50vh;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+            text-align: center;
+            color: darkblue;          
+        }
+        section{
+        max-width:600px;
+        margin: auto;
+        display:flex;
+        flex-wrap:wrap;
+        }
+    .columna{
+        border:1px solid;
+        border-color:darkblue
+        text-align: center;
+        color: darkblue;
+        flex-basis: 0%;
+        flex-grow: 1;
+        margin-left:10px ;
+        margin-bottom: 10px;
+        margin-top:15px;
+        }
+        main{
+            display: flex;
+            background-color: rgb(174, 238, 247);
+            height:100%;
+            margin: 20px; 
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: justify;
+            color: teal;
+            
+        }
+        p{
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+        }
+        table{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: darkblue;
+            border-color: darkblue;
+            width: 100%;
+        }
+        footer{
+            background-color: rgb(174, 238, 247);
+            margin: 20px;
+            height: 20vh;
+        }       
+    </style>
+</head>
+        <body>
+            <header>
+                <h3>Ejercicio Practico #7</h3>
+                <h1>Unidades de medida en CSS</h1>
+            </header>
+            <nav>
+                <section>
+                    <div class="columna">mm</div>
+                    <div class="columna">pc</div>
+                    <div class="columna">%</div>
+                </section>
+                <section>
+                    <div class="columna">rem</div>
+                    <div class="columna">px</div>
+                    <div class="columna">vh</div>
+                </section>
+                <section>
+                    <div class="columna">mc</div>
+                    <div class="columna">pt</div>
+                    <div class="columna">vw</div>
+                    <div class="columna">em</div>
+                </section>
+                <section>
+                    <div class="columna">vmin</div>
+                    <div class="columna">cm</div>
+                    <div class="columna">ex</div>
+                </section>
+                <section>
+                    <div class="columna">in</div>
+                    <div class="columna">vmax</div>
+            
+                </section>
+
+                <p>Las unidades de medida en CSS son muchas y se representan mediante un número seguido de su unidad de medida (sin espacios). Normalmente las vemos y usamos a menudo en el modelo de cajas, pero lo cierto es que están presentes en prácticamente todo el proyecto CSS. Por lo que las veremos en propiedades como font-size, margin, padding, etc.
+                Al ser tantas con las que trabajar, podemos distribuirlos en dos grandes grupos: medidas absolutas y medidas relativas.</p>
+            </nav>
+            <main>
+                <section>
+                    <h2>Medidas Absolutas</h2>
+                    <p>Las medidas absolutas son las medidas físicas (cm, in, mm, pc, pt) y la unidad px. Estas unidades aparecerán exactamente en el tamaño que se les dé, lo que significa que su valor es el que se define sin depender de otro como referencia. Por esta razón no se recomienda usar para pantalla sino para impresión ya que los medios impresos, por lo general, están medidos en esas unidades.
+                        Para que te hagas una idea, la relación entre las medidas absolutas físicas es la siguiente:
+                        1in = 2.54cm = 25.4mm = 72pt = 6pc
+                        
+                        Por otro lado y dentro de este mismo grupo de medidas absolutas, contamos con la unidad px, o lo que es lo mismo, píxel como todos conocemos. Un píxel CSS es igual a un píxel del dispositivo, o lo que lo mismo, un punto de la pantalla.</p>
+                        <table border="2px" align="center">
+                            <tr>
+                                <th>Unidad</th>
+                                <th>Nombre</th>
+                                <th>Equivale a</th>
+                            </tr>
+                            <tr>
+                                <td>cm</td>
+                                <td>Centimetros</td>
+                                <td>1cm = 96px/2,54</td>
+                            </tr>
+                            <tr>
+                                <td>mm</td>
+                                <td>Milimetros</td>
+                                <td>1mm = 1/10 de 1cm</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Q</td>
+                                <td>Cuartos de milimetro</td>
+                                <td>1Q = 1/40 de 1cm</td>
+                            </tr>
+                            <tr>
+                                <td>in</td>
+                                <td>Pulgadas</td>
+                                <td>1in = 2,54cm = 96px</td>
+                            </tr>
+                            <tr>
+                                <td>pc</td>
+                                <td>Picas</td>
+                                <td>1pc = 1/16 de 1in</td>
+                            </tr>
+                            <tr>
+                                <td>pt</td>
+                                <td>Puntos</td>
+                                <td>1pt = 1/72 de 1in</td>
+                            </tr>
+                            <tr>
+                                <td>px</td>
+                                <td>Pixeles</td>
+                                <td>1px = 1/96 de 1in</td>
+                            </tr>                           
+                        </table>
+
+                    <h3>Ventajas</h3>
+                    <p>La gran ventaja de las unidades relativas es que siempre mantienen las proporciones del diseño de la página.</p>
+                    <h3>Desventajas</h3>
+                    <p>Su mayor desventaja es que hay elementos que por necesidad tienen dimensiones fijas, como imágenes que quizás no desees que se estiren o se encojan dependiendo de la pantalla, columnas que deben tener siempre unas mismas dimensiones fijas, elementos de interfaz gráfica que no deseamos que alteren su forma, etc.</p>
+                    </section>
+                <section>
+                    <h2>Medidas Relativas</h2>
+                    <p>Medidas relativas
+                        Las medidas relativas como su propio nombre indica, son relativas a otro valor y se expresan en porcentaje ya que son escalables respecto a su valor referencial. Su ventaja es que siempre van a mantener las proporciones del diseño de la página por lo tanto son las recomendadas para trabajar en pantalla. Estos valores de referencia de los que dependen son dos: Tipografías y Ventana o pantalla de visualización</p>
+                        <table border="2px" align="center">
+                            <tr>
+                                <th>Unidad</th>
+                                <th>Relativa a</th>
+                            </tr>
+                            <tr>
+                                <td>em</td>
+                                <td>Tamaño de letra del elemento padre, en el caso de propiedades tipográficas como font-size, y tamaño de la fuente del propio elemento en el caso de otras propiedades, como width.</td>
+                            </tr>
+                            <tr>
+                                <td>ex</td>
+                                <td>Altura x de la fuente del elemento.</td>
+                            </tr>
+                            <tr>
+                                <td>ch</td>
+                                <td>La medida de avance (ancho) del glifo "0" de la letra del elemento.</td>
+                            </tr>
+                            <tr>
+                                <td>rem</td>
+                                <td>Tamaño de la letra del elemento raíz.</td>
+                            </tr>
+                            <tr>
+                                <td>lh</td>
+                                <td>Altura de la línea del elemento.</td>
+                            </tr>
+                            <tr>
+                                <td>vw</td>
+                                <td>1% del ancho de la ventana gráfica.</td>
+                            </tr>
+                            <tr>
+                                <td>vh</td>
+                                <td>1% del ancho de la ventana gráfica.</td>
+                            </tr>
+                            <tr>
+                                <td>vmin</td>
+                                <td>1% de la dimensión más pequeña de la ventana gráfica.</td>
+                            </tr>
+                            <tr>
+                                <td>vmax</td>
+                                <td>1% de la dimensión más grande de la ventana gráfica.</td>
+                            </tr>
+                        </table>    
+                
+                    <h3>Ventajas</h3>
+                    <p>La principal ventaja de las unidades absolutas es que su valor es directamente el valor que se debe utilizar, sin necesidad de realizar cálculos intermedios.</p>
+                    <h3>Desventajas</h3>
+                    <p>Su principal desventaja es que son muy poco flexibles y no se adaptan fácilmente a los diferentes medios. De hecho, cada navegador interpreta las medidas absolutas de forma ligeramente diferente.</p>
+                </section>
+            </main>
+            <footer>
+                <p>BIBLIOGRAFIA:</p>
+                <a href="https://www.pensandoenweb.es/unidades-medida-css/" target=_blank>PENSANDO EN WEB</a><br>
+                <a href="https://academiaweb.online/tutorial/unidades-de-medida-en-css/" target=_bank>Academia Web Online</a><br>
+                <a href="https://lenguajecss.com/css/modelo-de-cajas/unidades-css/" target=_blank>lenguajecss.com</a>
+            </footer>
+        </body>
+</html>
